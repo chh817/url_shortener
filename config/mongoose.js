@@ -11,4 +11,5 @@ db.on("error", () => console.log("connection error!"))
 // 連線成功
 db.once("open", () => console.log("MongoDB connected!"))
 
+// 匯出 db 連線模組
 module.exports = db

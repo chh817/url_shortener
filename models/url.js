@@ -12,4 +12,5 @@ const urlSchema = new Schema({
   }
 })
 
+// 匯出 Url model 模組
 module.exports = mongoose.model("Url", urlSchema)
