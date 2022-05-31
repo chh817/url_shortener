@@ -1,7 +1,8 @@
 // 設定變數
 const express = require("express")
 const router = express.Router()
-const url = require("../../models/url")
+const Url = require("../../models/url")
+const generateCode = require("././generate_code")
 
 
 // 設定路由
@@ -12,14 +13,15 @@ router.get("/", (req, res) => res.render("index"))
 router.post("/", (req, res) => {
   const urlInput = req.body.url.trim().toLowerCase()
   const host = req.headers.host
+  const code = generateCode(5)
   if (urlInput === "") return res.redirect("/")
-  url.findOne({ originalUrl: urlInput })
+  Url.findOne({ originalUrl: urlInput })
     .lean()
     .then(urlData => {
-      res.render("index", {})
+      res.render("index", { host, code })
       if (urlData === "") {
-        res.render("index", {})
-        url.create(urlInput, shortenUrl)
+        res.render("index", { host, code })
+        Url.create(urlInput, code)
       }
     })
     .catch(error => console.log(error))

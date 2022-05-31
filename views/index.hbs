@@ -5,10 +5,10 @@
   </div>
 </form>
 
-{{#if}}
+{{#if code}}
 <div class="form-group">
   <h3>Success! Please use this link:</h3>
-  <p id="urlGenerated" style="color: blue">https://{{host}}/{{}}</p>
+  <p id="urlGenerated" style="color: blue">https://{{host}}/{{code}}</p>
   <button class="btn" onclick="urlCopy()">Copy</button>
 </div>
 {{/if}}
