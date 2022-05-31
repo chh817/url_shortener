@@ -10,4 +10,5 @@ const generateCode = function (codeLength) {
   return code
 }
 
+// 匯出 generate code 函式
 module.exports = generateCode
