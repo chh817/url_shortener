@@ -1,1 +1,23 @@
-<h2>Hello world! 這是 index</h2>
+<form class="" action="/" method="POST">
+  <div class="form-group">
+    <input class="form-control" type="url" id="url" name="url" placeholder="input URL here" required>
+    <button class="btn" type="submit">Shorten</button>
+  </div>
+</form>
+
+{{#if}}
+<div class="form-group">
+  <h3>Success! Please use this link:</h3>
+  <p id="urlGenerated" style="color: blue">https://{{host}}/{{}}</p>
+  <button class="btn" onclick="urlCopy()">Copy</button>
+</div>
+{{/if}}
+
+<script>
+  function urlCopy() {
+    const urlGenerated = document.findElementById("urlGenerated").innerText
+    navigator.clipboard.writeText(urlGenerated)
+      .then(() => alert("URL Copied!"))
+      .catch(error => console.log(error))
+  }
+</script>
