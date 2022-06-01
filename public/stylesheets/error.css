@@ -2,6 +2,11 @@
   padding-top: 90px;
 }
 
+#hintHeader {
+  position: relative;
+  left: 120px;
+}
+
 #backButton {
   position: relative;
   top: 10px;
