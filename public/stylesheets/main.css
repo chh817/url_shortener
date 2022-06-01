@@ -1,0 +1,15 @@
+.mainPart {
+  position: absolute;
+  top: 150px;
+  left: 650px;
+  width: 600px;
+  height: 600px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid grey;
+}
+
+.mainHeader {
+  margin-bottom: 50px;
+}

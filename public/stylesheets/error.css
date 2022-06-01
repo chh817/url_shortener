@@ -1,0 +1,9 @@
+.msgContainer {
+  padding-top: 90px;
+}
+
+#backButton {
+  position: relative;
+  top: 10px;
+  width: 150px;
+}

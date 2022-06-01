@@ -1,0 +1,36 @@
+.urlForm {
+  position: relative;
+  top: 100px;
+  left: 55px;
+  width: 1500px;
+}
+
+#url {
+  position: relative;
+  left: 420px;
+  width: 550px;
+  height: 45px;
+  margin-bottom: 20px;
+  background-color: rgb(247, 242, 242);
+}
+
+#submitButton {
+  position: relative;
+  left: 570px;
+  width: 250px;
+  height: 45px;
+}
+
+.urlContainer {
+  padding-top: 90px;
+}
+
+#urlGenerated {
+  font-size: x-large;
+}
+
+#copyButton {
+  position: relative;
+  width: 150px;
+  left: 105px;
+}

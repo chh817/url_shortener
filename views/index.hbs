@@ -1,23 +1,22 @@
-<form class="" action="/" method="POST">
-  <div class="form-group">
-    <input class="form-control" type="url" id="url" name="url" placeholder="input URL here" required>
-    <button class="btn" type="submit">Shorten</button>
-  </div>
-</form>
-
 {{#if code}}
-<div class="form-group">
+<div class="form-group urlContainer">
   <h3>Success! Please use this link:</h3>
-  <p id="urlGenerated" style="color: blue">https://{{host}}/{{code}}</p>
-  <button class="btn" onclick="urlCopy()">Copy</button>
+  <p id="urlGenerated" style="color: blue">{{host}}/{{code}}</p>
+  <button class="btn btn-primary" id="copyButton" onclick="urlCopy()">Copy</button>
 </div>
-{{/if}}
-
 <script>
   function urlCopy() {
-    const urlGenerated = document.findElementById("urlGenerated").innerText
+    const urlGenerated = document.getElementById("urlGenerated").innerText
     navigator.clipboard.writeText(urlGenerated)
       .then(() => alert("URL Copied!"))
       .catch(error => console.log(error))
   }
 </script>
+{{else}}
+<form class="urlForm" action="/" method="POST">
+  <div class="form-group">
+    <input class="form-control" type="url" name="url" id="url" placeholder="Input URL here" required>
+    <button class="btn btn-outline-primary" id="submitButton" type="submit">Shorten</button>
+  </div>
+</form>
+{{/if}}
