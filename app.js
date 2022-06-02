@@ -25,4 +25,4 @@ app.use(routes)
 app.use(express.static("public"))
 
 // 設定 port 監聽
-app.listen(3000, () => console.log(`App is running on http://localhost:${port}`))
+app.listen(port, () => console.log(`App is running on http://localhost:${port}`))
