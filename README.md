@@ -32,16 +32,16 @@ npm i
 ```zsh
 export MONGODB_URI="mongodb+srv://使用者名稱:使用者密碼@資料庫位置/資料庫名稱(與下載資料夾名稱相同)?retryWrites=true&w=majority"
 ``` 
-6. 載入完畢，繼續輸入
+5. 載入完畢，繼續輸入
 ```zsh
 npm run start
 ```
-7. 當出現下列訊息代表連線成功，可進入網址進行測試
+6. 當出現下列訊息代表連線成功，可進入網址進行測試
 ```zsh
 App is running on http://localhost:3000
 Mongodb connected!
 ```
-8. 若要停止連線，使用下列快速鍵
+7. 若要停止連線，使用下列快速鍵
 ```zsh
 Command⌘ + C
 ```
