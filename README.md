@@ -32,7 +32,7 @@ npm i
 ```zsh
 export MONGODB_URI="mongodb+srv://使用者名稱:使用者密碼@資料庫位置/資料庫名稱(與下載資料夾名稱相同)?retryWrites=true&w=majority"
 ``` 
-5. 載入完畢，繼續輸入
+5. 設定完畢，繼續輸入
 ```zsh
 npm run start
 ```
